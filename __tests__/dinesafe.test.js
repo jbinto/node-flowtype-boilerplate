@@ -1,6 +1,6 @@
 /** @flow */
 
-import { parseBigXmlToInspection } from '../src/dinesafe'
+import { parseBigXmlToInspection, shouldSkip } from '../src/dinesafe'
 
 describe('parseBigXmlToInspection', () => {
   it('has no regressions in snapshot', () => {
@@ -30,5 +30,32 @@ describe('parseBigXmlToInspection', () => {
 
     const result = parseBigXmlToInspection(SAMPLE_OUTPUT_FROM_BIGXML)
     expect(result).toMatchSnapshot()
+  })
+})
+
+describe('shouldSkip', () => {
+  it('should skip an older date', () => {
+    expect(
+      shouldSkip({
+        INSPECTION_DATE: '2016-01-01',
+      })
+    ).toEqual(true)
+  })
+
+  it('should skip a Pass', () => {
+    expect(
+      shouldSkip({
+        ESTABLISHMENT_STATUS: 'Pass',
+      })
+    ).toEqual(true)
+  })
+
+  it('should not skip a recent failure', () => {
+    expect(
+      shouldSkip({
+        ESTABLISHMENT_STATUS: 'Conditional Pass',
+        INSPECTION_DATE: '2017-08-01',
+      })
+    ).toEqual(false)
   })
 })

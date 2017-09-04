@@ -4,7 +4,6 @@ export default class InspectionList {
   }
 
   add(inspection) {
-    console.log('---', inspection, '-----------------------------')
     const {
       // ACTION,
       // AMOUNT_FINED,

@@ -23,7 +23,7 @@ export const parseBigXmlToInspection = record =>
     .mapValues('text')
     .value()
 
-const shouldSkip = inspection => {
+export const shouldSkip = inspection => {
   const isPass = inspection.ESTABLISHMENT_STATUS === 'Pass'
   const isOld = !RECENT_DATE_REGEX.test(inspection.INSPECTION_DATE)
   return isPass || isOld

@@ -51,26 +51,42 @@ const INSPECTION_1_2ND_VIOLATION = {
   AMOUNT_FINED: ' ',
 }
 
-describe('xxx', () => {
+describe('InspectionList', () => {
   let list
   beforeEach(() => {
     list = new InspectionList()
   })
 
-  it('adds a inspection to the list', () => {
+  it('.add()', () => {
     list.add(INSPECTION_1)
     expect(list.count()).toEqual(1)
     expect(list).toMatchSnapshot()
   })
 
-  it('adds 2 inspections from different establishments to the list', () => {
+  it('.toArray()', () => {
+    list.add(INSPECTION_1)
+    list.add(INSPECTION_2)
+    list.add(INSPECTION_1_2ND_VIOLATION)
+
+    expect(list.toArray()).toMatchSnapshot()
+  })
+
+  it('.toObject()', () => {
+    list.add(INSPECTION_1)
+    list.add(INSPECTION_2)
+    list.add(INSPECTION_1_2ND_VIOLATION)
+
+    expect(list.toObject()).toMatchSnapshot()
+  })
+
+  it('.add() 2 inspections from different establishments', () => {
     list.add(INSPECTION_1)
     list.add(INSPECTION_2)
     expect(list.count()).toEqual(2)
     expect(list).toMatchSnapshot()
   })
 
-  it('groups multiple violations in the same inspection', () => {
+  it('.add() groups multiple violations in the same inspection', () => {
     list.add(INSPECTION_1)
     list.add(INSPECTION_1_2ND_VIOLATION)
     expect(list.count()).toEqual(1)

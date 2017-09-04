@@ -1,6 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`xxx adds 2 inspections from different establishments to the list 1`] = `
+exports[`InspectionList .add() 1`] = `
+InspectionList {
+  "inspections": Object {
+    "2017-08-22104037228": Object {
+      "address": "2200 YONGE ST ",
+      "date": "2017-08-22",
+      "infractions": Array [
+        Object {
+          "details": "Operator fail to provide adequate pest control",
+          "severity": "S - Significant",
+        },
+      ],
+      "name": "MANDARIN",
+      "status": "Conditional Pass",
+    },
+  },
+}
+`;
+
+exports[`InspectionList .add() 2 inspections from different establishments 1`] = `
 InspectionList {
   "inspections": Object {
     "2017-07-12104009693": Object {
@@ -31,26 +50,7 @@ InspectionList {
 }
 `;
 
-exports[`xxx adds a inspection to the list 1`] = `
-InspectionList {
-  "inspections": Object {
-    "2017-08-22104037228": Object {
-      "address": "2200 YONGE ST ",
-      "date": "2017-08-22",
-      "infractions": Array [
-        Object {
-          "details": "Operator fail to provide adequate pest control",
-          "severity": "S - Significant",
-        },
-      ],
-      "name": "MANDARIN",
-      "status": "Conditional Pass",
-    },
-  },
-}
-`;
-
-exports[`xxx groups multiple violations in the same inspection 1`] = `
+exports[`InspectionList .add() groups multiple violations in the same inspection 1`] = `
 InspectionList {
   "inspections": Object {
     "2017-08-22104037228": Object {
@@ -69,6 +69,72 @@ InspectionList {
       "name": "MANDARIN",
       "status": "Conditional Pass",
     },
+  },
+}
+`;
+
+exports[`InspectionList .toArray() 1`] = `
+Array [
+  Object {
+    "address": "2200 YONGE ST ",
+    "date": "2017-08-22",
+    "infractions": Array [
+      Object {
+        "details": "Operator fail to provide adequate pest control",
+        "severity": "S - Significant",
+      },
+      Object {
+        "details": "Operator fail to properly maintain rooms",
+        "severity": "M - Minor",
+      },
+    ],
+    "name": "MANDARIN",
+    "status": "Conditional Pass",
+  },
+  Object {
+    "address": "301 FRONT ST W",
+    "date": "2017-07-12",
+    "infractions": Array [
+      Object {
+        "details": "Operator fail to properly maintain mechanical washer",
+        "severity": "S - Significant",
+      },
+    ],
+    "name": "MAIN KITCHEN - BASEMENT",
+    "status": "Conditional Pass",
+  },
+]
+`;
+
+exports[`InspectionList .toObject() 1`] = `
+Object {
+  "2017-07-12104009693": Object {
+    "address": "301 FRONT ST W",
+    "date": "2017-07-12",
+    "infractions": Array [
+      Object {
+        "details": "Operator fail to properly maintain mechanical washer",
+        "severity": "S - Significant",
+      },
+    ],
+    "name": "MAIN KITCHEN - BASEMENT",
+    "status": "Conditional Pass",
+  },
+  "2017-08-22104037228": Object {
+    "address": "2200 YONGE ST ",
+    "date": "2017-08-22",
+    "infractions": Array [
+      Object {
+        "details": "Operator fail to provide adequate pest control",
+        "severity": "S - Significant",
+      },
+      Object {
+        "details": "Operator fail to properly maintain rooms",
+        "severity": "M - Minor",
+      },
+    ],
+    "name": "MANDARIN",
+    "status": "Conditional Pass",
   },
 }
 `;
