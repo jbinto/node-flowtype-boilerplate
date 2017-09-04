@@ -2,6 +2,12 @@
   "name": "dinesafe2017",
   "version": "0.0.0",
   "description": "just an experiment",
+  "dependencies": {
+    "big-xml": "^1.0.0",
+    "case": "^1.5.3",
+    "lodash": "^4.17.4",
+    "sorted-object": "^2.0.1"
+  },
   "devDependencies": {
     "babel-cli": "~6.26.0",
     "babel-core": "~6.26.0",
