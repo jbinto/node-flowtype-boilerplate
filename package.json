@@ -1,27 +1,20 @@
 {
-  "name": "node-flowtype-boilerplate",
+  "name": "dinesafe2017",
   "version": "0.0.0",
-  "description": "Minimalistic boilerplate to quick-start Node.js development in ES6+ (stage-3) with Flow type checking.",
-  "engineStrict": true,
-  "engines": {
-    "node": ">=6.9"
-  },
+  "description": "just an experiment",
   "devDependencies": {
-    "babel-cli": "~6.24.1",
-    "babel-core": "~6.25.0",
+    "babel-cli": "~6.26.0",
+    "babel-core": "~6.26.0",
     "babel-eslint": "~7.2.2",
-    "babel-jest": "~19.0.0",
-    "babel-plugin-transform-async-to-generator": "~6.24.1",
-    "babel-plugin-transform-es2015-modules-commonjs": "~6.24.1",
-    "babel-plugin-transform-flow-strip-types": "~6.22.0",
-    "babel-plugin-transform-runtime": "~6.23.0",
-    "babel-preset-stage-3": "~6.24.1",
-    "eslint": "~3.19.0",
-    "eslint-config-airbnb-base": "~11.1.3",
-    "eslint-plugin-flowtype": "~2.31.0",
-    "eslint-plugin-import": "~2.2.0",
-    "flow-bin": "~0.44.2",
-    "jest": "~19.0.2"
+    "babel-jest": "~20.0.3",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "~4.6.1",
+    "eslint-config-airbnb-base": "~12.0.0",
+    "eslint-plugin-flowtype": "~2.35.1",
+    "eslint-plugin-import": "~2.7.0",
+    "flow-bin": "~0.54.0",
+    "jest": "~20.0.4"
   },
   "scripts": {
     "clean": "rm -rf coverage dist tmp",
@@ -35,16 +28,8 @@
     "build": "babel src/**/*.js -d dist",
     "build:watch": "babel --watch src/**/*.js -d dist"
   },
-  "author": "Jakub Synowiec <jakub@jakubsynowiec.info> (https://jakubsynowiec.info)",
+  "author": "Jesse Buchanan",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jsynowiec/node-flowtype-boilerplate.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jsynowiec/node-flowtype-boilerplate/issues"
-  },
-  "homepage": "https://github.com/jsynowiec/node-flowtype-boilerplate#readme",
   "jest": {
     "testEnvironment": "node",
     "moduleFileExtensions": [
@@ -54,8 +39,5 @@
     "collectCoverageFrom": [
       "src/**/*.js"
     ]
-  },
-  "dependencies": {
-    "babel-runtime": "~6.23.0"
   }
 }
