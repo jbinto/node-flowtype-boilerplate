@@ -1,7 +1,3 @@
-# dinesafe2017
-
-...
-
 # License
 
 MIT
