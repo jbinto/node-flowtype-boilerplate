@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`parseBigXmlToInspection has no regressions in snapshot 1`] = `
+Object {
+  "ACTION": "Corrected During Inspection",
+  "AMOUNT_FINED": " ",
+  "COURT_OUTCOME": " ",
+  "ESTABLISHMENTTYPE": "Restaurant",
+  "ESTABLISHMENT_ADDRESS": "7 ELM ST ",
+  "ESTABLISHMENT_ID": "9001121",
+  "ESTABLISHMENT_NAME": "BARBERIAN'S STEAK HOUSE",
+  "ESTABLISHMENT_STATUS": "Pass",
+  "INFRACTION_DETAILS": "FAIL TO STORE FOOD ON RACKS OR SHELVES O. REG  562/90 SEC. 23",
+  "INSPECTION_DATE": "2017-05-17",
+  "INSPECTION_ID": "103970956",
+  "MINIMUM_INSPECTIONS_PERYEAR": "3",
+  "ROW_ID": "781",
+  "SEVERITY": "S - Significant",
+}
+`;
